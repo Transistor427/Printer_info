@@ -12,11 +12,9 @@ if [ -f /home/$host/klipper_config/printer.cfg ];
         prt_conf=($(find /home/$host/ -name printer.cfg))
 fi
 
-echo -n > /home/$host/Printer_info/info.txt
-echo "Get Hostname printer."
-echo "Hostname: $host" >> /home/$host/Printer_info/info.txt
-
 ID=($(cat $prt_conf | grep "ZBS" | cut -b 8-16))
+
+echo -n > /home/$host/Printer_info/info.txt
 echo "S/N: $ID" >> /home/$host/Printer_info/info.txt
 echo "User: $host" >> /home/$host/Printer_info/info.txt
 echo "Board: $board" >> /home/$host/Printer_info/info.txt
