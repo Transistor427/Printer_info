@@ -3,7 +3,7 @@
 host=$(whoami)
 board=$(uname -n)
 os=$(uname -o)
-kernel_rls=$(uname -o)
+kernel_rls=$(uname -r)
 
 if [ -f /home/$host/klipper_config/printer.cfg ];
     then
