@@ -17,7 +17,7 @@ fi
 echo -n > /home/$host/Printer_info/info.txt
 ID=($(cat $prt_conf | grep "ZBS" | cut -b 8-16))
 
-cat $prt_conf | grep "position_max: 210"
+cat $prt_conf | grep "position_max: 200"
 if [ $? -eq 0 ];
     then
         echo "Model: S32" >> /home/$host/Printer_info/info.txt
