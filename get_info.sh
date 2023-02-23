@@ -1,7 +1,5 @@
 #!/bin/sh
 
-
-
 host=$(whoami)
 board=$(uname -n)
 os=$(uname -o)
@@ -24,10 +22,7 @@ if [ $? -eq 0 ];
     else
         echo "Model: S300" >> /home/$host/Printer_info/info.txt
 fi
-
-
 echo "S/N: $ID" >> /home/$host/Printer_info/info.txt
-echo "User: $host" >> /home/$host/Printer_info/info.txt
 echo "Board: $board" >> /home/$host/Printer_info/info.txt
 echo "OS: $os" >> /home/$host/Printer_info/info.txt
 echo "Kernel: $kernel_rls" >> /home/$host/Printer_info/info.txt
